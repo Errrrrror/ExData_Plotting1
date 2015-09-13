@@ -14,7 +14,7 @@ temp<-tmp[tmp$Date=="1/2/2007" | tmp$Date=="2/2/2007"]
 dt<-temp
 i<-3
 while (i<10){dt[[i]]<-as.numeric(temp[[i]]);i<-i+1}
-time<-strptime(paste(dt$Date,dt$Time),"%d/%m/%Y %H:%M:%S")
+datetime<-strptime(paste(dt$Date,dt$Time),"%d/%m/%Y %H:%M:%S")
 
 #draw plot1
 png("plot1.png")
