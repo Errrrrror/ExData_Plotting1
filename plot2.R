@@ -14,8 +14,7 @@ temp<-tmp[tmp$Date=="1/2/2007" | tmp$Date=="2/2/2007"]
 dt<-temp
 i<-3
 while (i<10){dt[[i]]<-as.numeric(temp[[i]]);i<-i+1}
-dt[[1]]<-as.Date(temp[[1]],"%d/%m/%Y")
-datetime<-strptime(paste(dt[[1]],dt[[2]]),"%Y-%m-%d %H:%M:%S")
+datetime<-strptime(paste(dt$Date,dt$Time),"%d/%m/%Y %H:%M:%S")
 
 
 #draw plot2
